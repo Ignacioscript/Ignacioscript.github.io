@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css"
+        rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Juego</title>
+</head>
+
+<body>
+    <header>
+
+        <h1>ENCRIPTADOR </h1>
+
+
+    </header>
+
+    <main>
+
+        
+        <section id="main">
+           
+            <input type="text" id="texto" required="" placeholder="Ingrese Texto en minusculas y sin acentos " class="input-text">
+
+           
+
+
+
+            <div id="encripter-desencripter">
+
+                
+                <button id="desencriptar">desencriptar</button>
+                <button id="encriptar">encriptar</button>
+                
+
+            </div>
+
+            <!--FUNCION ENCRIPTAR Y DESENCRIPTAR-->
+            <div id="box-funciones">
+                
+                <script>
+                    
+                    var input = document.querySelector("input");
+                    input.focus();
+                    
+
+                    //FUNCION ENCRIPTAR
+                    document.getElementById("encriptar").onclick = function encriptar(texto) {
+                        texto = input.value.split('');
+                        var letraA = "a";
+                        var letraE = "e";
+                        var letraI = "i";
+                        var letraO = "o";
+                        var letraU = "u";
+
+                        //cambiar por el input del usuario
+                        for (var i = 0; i < texto.length; i++) {
+                            if (letraA == texto[i]) {
+                                texto[i] = "ai";
+                            }
+
+                            if (letraE == texto[i]) {
+                                texto[i] = "enter";
+                            }
+
+                            if (letraI == texto[i]) {
+                                texto[i] = "imes";
+                            }
+
+                            if (letraO == texto[i]) {
+                                texto[i] = "ober";
+                            }
+
+                            if (letraU == texto[i]) {
+                                texto[i] = "ufat";
+                            }
+                        }
+                        var palabraEncriptada = texto.join('');
+                        //return document.write("Su mensaje encriptado es : " + palabraEncriptada);
+                        var resultado = document.getElementById("resultado");
+                        return resultado.innerHTML = "El mensaje encriptado es: " + palabraEncriptada;
+
+                    }
+
+
+
+
+                    // FUNCIÓN DESENCRIPTAR
+                    document.getElementById("desencriptar").onclick = function desencriptar(text) {
+                        text = input.value
+                            .replace(/ai/ig, "a")
+                            .replace(/enter/ig, "e")
+                            .replace(/imes/ig, "i")
+                            .replace(/ober/ig, "o")
+                            .replace(/ufat/ig, "u");
+                        //return document.write("El mensaje desencriptado es: " + text);
+                        var resultado = document.getElementById("resultado");
+                        return resultado.innerHTML = "El mensaje desencriptado es: " + text + "";
+
+
+                    }
+
+
+
+
+
+                </script>
+                
+
+            </div>
+
+
+
+        </section>
+
+        <div id="rectangle">
+
+            <img>
+            <div class="frame5">
+                <h3>Su mensaje aparece aquí, para copiar de un click sobre el mensaje</h3>
+                <p id="resultado"></p>
+
+                <script>
+
+                    document.getElementById("resultado").addEventListener("click", function () {
+                        navigator.clipboard.writeText(document.getElementById("resultado").innerText).then(function () {
+                            console.log("Copiado al portapapeles");
+                        }, function (err) {
+                            console.error("No se pudo copiar al portapapeles", err);
+                        });
+                    });
+
+                </script>
+
+
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

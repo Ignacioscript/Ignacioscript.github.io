@@ -1,0 +1,227 @@
+body {
+    position: absolute;
+    width: 1000px;
+    height: auto;
+
+    /* Light blue/light-blue-100 */
+
+    background: #D8DFE8;
+    
+}
+
+h1 {
+    width: auto;
+    margin: 20px auto;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 40px;
+
+}
+
+
+
+#main {
+    width: 70%;
+
+}
+
+.input-text {
+    /* Ingrese el texto aqui */
+
+    position: absolute;
+    width: 577px;
+    height: 48px;
+    left: 240px;
+    top: 168px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+
+    color: #0A3871;
+
+}
+
+
+#encripter-desencripter {
+
+    /* Frame 3 */
+
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 24px;
+
+    position: absolute;
+    width: 680px;
+    height: 67px;
+    left: 240px;
+    top: 500px;
+
+}
+
+
+
+
+
+#desencriptar {
+    box-sizing: border-box;
+    /* Auto layout */
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 24px;
+    gap: 8px;
+    width: 328px;
+    height: 67px;
+    background: #D8DFE8;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+
+    /* Inside auto layout */
+    color: #0A3871;
+    text-align: center;
+    font-weight: bold;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+
+
+}
+
+#encriptar {
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 24px;
+    gap: 8px;
+    width: 328px;
+    height: 67px;
+    background: #0A3871;
+    border-radius: 24px;
+
+    /* Inside auto layout */
+    color: #FFFFFF;
+    text-align: center;
+    font-weight: bold;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+}
+
+#rectangle {
+
+    position: absolute;
+    width: 400px;
+    height: 250px;
+    left: 1000px;
+    top: 40px;
+
+    /* White */
+
+    background: #FFFFFF;
+    /* shadow */
+
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
+}
+
+
+#resultado{
+    width: 400px;
+    text-align: center;
+    color: #0A3871;
+    vertical-align: middle;
+    height: 100px;
+    left: 1000px;
+    top: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+    
+
+}
+
+#resultado{
+    padding: 3rem 0;
+    cursor: pointer;
+}
+
+#resultado:active{
+    color: lightskyblue
+    
+   
+}
+
+.frame5 h3{
+    font-size: 15px;
+    text-align: center;
+    color: #495057;
+    margin: 2rem 2rem;
+
+
+
+}
+
+.advertencia{
+    color: #495057;
+    font-size: 10px;
+    text-align: center;
+    vertical-align: bottom;
+    
+   
+    
+
+    
+    
+}
+
+
+@media screen and (max-width:480px) {
+
+    body{
+
+        height: 80vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    h1{
+            text-align: center;
+            
+    }
+
+    .input-text{
+            position: auto;
+    }
+    
+    #encripter-desencripter {
+        display: flex;
+        align-items: center;
+        
+    }
+
+
+
+    #rectangle{
+        position: absolute;
+        top: 650px;
+        left: 300px;
+        height: 30%;
+        width: 50%;
+        margin: 20px 10px 0 10px ; 
+    }
+  
+
+
+
+    
+}
+
